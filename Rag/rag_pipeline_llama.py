@@ -21,4 +21,20 @@ class QueryProcessor:
                                              llm=self.llm
                                              )
         response = query_engine.query(question)
-        return str(response)
+        answer = str(response)
+
+        # Get source nodes (top matching chunks)
+        source_nodes = response.source_nodes
+
+        # Build source info output
+        sources = []
+        for i, node in enumerate(source_nodes):
+            metadata = node.node.metadata
+            text_chunk = node.node.text.strip()
+            sources.append(f"Source {i+1}:\n{text_chunk}\nMetadata: {metadata}\n")
+
+        # Join all sources
+        sources_info = "\n---\n".join(sources)
+
+        # Return both answer and sources
+        return f"Answer:\n{answer}\n\nSources:\n{sources_info}"
