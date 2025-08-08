@@ -15,6 +15,6 @@ def main(query):
     
 
 if __name__ == "__main__":
-    user_input="what are the key points for HCLtech Responsible AI tenets?"
+    user_input="what are the Evolution of Autonomy"
     answer=main(user_input)
     print("💬 Answer:", answer)
