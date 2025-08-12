@@ -37,4 +37,5 @@ class QueryProcessor:
         sources_info = "\n---\n".join(sources)
 
         # Return both answer and sources
-        return f"Answer:\n{answer}\n\nSources:\n{sources_info}"
+        # return f"Answer:\n{answer}\n\nSources:\n{sources_info}"
+        return answer
