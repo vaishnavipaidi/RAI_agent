@@ -15,4 +15,9 @@ langgraph
 streamlit
 pytesseract
 pdfminer.six==20221105
+llama-parse
+llama-index-embeddings-azure-openai
+llama-index-llms-azure-openai
+llama-index-vector-stores-faiss
+llama-index-readers-llama-parse
 unstructured[pdf]==0.10.25
